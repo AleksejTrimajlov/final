@@ -10,10 +10,12 @@ console.log(document.documentElement.scrollWidth);
   if( window.innerWidth > 1220){
     document.querySelector('.nav').classList.toggle('burger-menu');
     document.querySelector('.burger').classList.toggle('hidden');
-    document.querySelector('.search__button').classList.toggle('hidden')
+    document.querySelector('.button-search--outer').classList.toggle('hidden');
   }
   else {
-    document.querySelector('.search-form__filter').classList.toggle('hidden')
+    document.querySelector('.search-form__filter').classList.toggle('hidden');
+    document.querySelector('.nav__item--login').classList.toggle('nav__item--login-mobile');
+    document.querySelector('.login-btn').classList.toggle('login-btn--mobile');
   }
 
   document.querySelector('.burger').addEventListener('click', function() {
@@ -35,7 +37,8 @@ console.log(document.documentElement.scrollWidth);
 
 function myFunction() {
   document.querySelector('.search-form').classList.toggle('search-form--active');
-  document.querySelector('.search__button').classList.toggle('search__button--active')
+  document.querySelector('.button-search--outer').classList.toggle('search__button--active');
+  document.querySelector('.button-search--outer').children[0].classList.toggle('hidden');
 }
 
 const swiper = new Swiper('.swiper', {
